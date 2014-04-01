@@ -2236,3 +2236,117 @@ INF [20140401-14:32:31.459] finatra: admin http server started on port: :9990
 INF [20140401-14:34:40.629] finatra: finatra process 39974 started
 INF [20140401-14:34:40.632] finatra: http server started on port: :7070
 INF [20140401-14:34:41.234] finatra: admin http server started on port: :9990
+INF [20140401-14:44:16.995] finatra: finatra process 40255 started
+INF [20140401-14:44:16.998] finatra: http server started on port: :7070
+INF [20140401-14:44:17.674] finatra: admin http server started on port: :9990
+INF [20140401-17:53:40.541] finatra: finatra process 41890 started
+INF [20140401-17:53:40.544] finatra: http server started on port: :7070
+INF [20140401-17:53:41.256] finatra: admin http server started on port: :9990
+INF [20140401-17:54:03.778] finatra: GET / 200 50ms
+INF [20140401-17:54:04.001] finatra: GET /js/vendors/bootstrap/dist/css/bootstrap.min.css 200 4ms
+INF [20140401-17:54:04.003] finatra: GET /js/vendors/bootstrap/dist/js/bootstrap.min.js 200 3ms
+INF [20140401-17:54:04.003] finatra: GET /js/vendors/jquery.min.js 200 3ms
+INF [20140401-17:54:04.007] finatra: GET /js/vendors/react.min.js 200 5ms
+INF [20140401-17:54:04.010] finatra: GET /js/vendors/JSXTransformer.js 200 6ms
+INF [20140401-17:54:04.023] finatra: GET /js/vendors/underscore.js 200 2ms
+INF [20140401-17:54:04.023] finatra: GET /js/vendors/backbone.js 200 2ms
+INF [20140401-17:54:04.038] finatra: GET /js/all.scripts.js 200 7ms
+INF [20140401-17:54:04.064] finatra: GET /js/vendors/bootstrap/dist/css/bootstrap-theme.min.css 200 7ms
+INF [20140401-17:54:04.457] finatra: GET /js/models/MovieModel.js 200 1ms
+INF [20140401-17:54:04.462] finatra: GET /js/models/MoviesCollection.js 200 1ms
+INF [20140401-17:54:04.490] finatra: GET /js/models/RateModel.js 200 0ms
+INF [20140401-17:54:04.501] finatra: GET /js/models/RatesCollection.js 200 0ms
+INF [20140401-17:54:04.507] finatra: GET /js/models/UserModel.js 200 1ms
+INF [20140401-17:54:04.523] finatra: GET /js/models/UsersCollection.js 200 0ms
+INF [20140401-17:54:04.528] finatra: GET /js/components/ApplicationTab.js 200 1ms
+INF [20140401-17:54:04.596] finatra: GET /js/components/MoviesTable.js 200 1ms
+INF [20140401-17:54:04.711] finatra: GET /js/components/UsersTable.js 200 1ms
+INF [20140401-17:54:04.756] finatra: GET /js/main.js 200 1ms
+INF [20140401-17:54:04.879] finatra: GET /movies/search/genre/bollywood/10 200 82ms
+INF [20140401-17:54:04.884] finatra: GET /users/search/John%20Doe/10 200 94ms
+INF [20140401-17:54:05.327] finatra: GET /favicon.ico 404 2ms
+INF [20140401-17:54:15.242] finatra: GET /users/search/bob/10 200 40ms
+INF [20140401-17:54:30.079] finatra: GET /movies/search/genre/co/10 200 16ms
+INF [20140401-17:54:31.958] finatra: POST /rates 201 27ms
+INF [20140401-17:54:33.475] finatra: POST /rates 201 8ms
+INF [20140401-17:54:34.660] finatra: POST /rates 201 13ms
+INF [20140401-17:54:47.288] finatra: POST /rates 201 14ms
+INF [20140401-17:54:48.433] finatra: POST /rates 201 8ms
+INF [20140401-17:54:57.964] finatra: GET /users/share/2164/5707 200 6ms
+INF [20140401-17:56:30.854] finatra: finatra process 41914 started
+INF [20140401-17:56:30.856] finatra: http server started on port: :7070
+INF [20140401-17:56:31.353] finatra: admin http server started on port: :9990
+INF [20140401-17:56:46.706] finatra: POST /rates 201 141ms
+INF [20140401-17:56:47.492] finatra: POST /rates 201 15ms
+INF [20140401-17:56:49.027] finatra: POST /rates 201 12ms
+INF [20140401-17:56:50.560] finatra: POST /rates 201 11ms
+INF [20140401-17:57:00.416] finatra: POST /rates 201 51ms
+INF [20140401-17:57:01.405] finatra: POST /rates 201 9ms
+ERR [20140401-17:57:05.476] finatra: Internal Server Error
+ERR [20140401-17:57:05.476] finatra: java.util.NoSuchElementException: key not found: 2164
+ERR [20140401-17:57:05.476] finatra:     at scala.collection.MapLike$class.default(MapLike.scala:228)
+ERR [20140401-17:57:05.476] finatra:     at scala.collection.AbstractMap.default(Map.scala:58)
+ERR [20140401-17:57:05.476] finatra:     at scala.collection.MapLike$class.apply(MapLike.scala:141)
+ERR [20140401-17:57:05.476] finatra:     at scala.collection.AbstractMap.apply(Map.scala:58)
+ERR [20140401-17:57:05.476] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$8.apply(App.scala:71)
+ERR [20140401-17:57:05.476] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$8.apply(App.scala:63)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:79)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:88)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:95)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:89)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:88)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finatra.Router.dispatchRouteOrCallback(Router.scala:33)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finatra.Router.dispatch(Router.scala:14)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:29)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:28)
+ERR [20140401-17:57:05.476] finatra:     at scala.collection.LinearSeqOptimized$class.find(LinearSeqOptimized.scala:100)
+ERR [20140401-17:57:05.476] finatra:     at scala.collection.immutable.List.find(List.scala:84)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finatra.ControllerCollection.dispatch(ControllerCollection.scala:28)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finatra.AppService.attemptRequest(AppService.scala:51)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:38)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:23)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finagle.Service$$anon$1.apply(Service.scala:14)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:120)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:85)
+ERR [20140401-17:57:05.476] finatra:     at com.twitter.finagle.Filter$$anon$2.apply(Filter.scala:69)
+ERR [20140401-17:57:05.476] finatra:     (...more...)
+INF [20140401-17:57:05.507] finatra: GET /users/share/2164/5707 500 38ms
+ERR [20140401-17:57:54.850] finatra: Internal Server Error
+ERR [20140401-17:57:54.850] finatra: java.util.NoSuchElementException: key not found: 2164
+ERR [20140401-17:57:54.850] finatra:     at scala.collection.MapLike$class.default(MapLike.scala:228)
+ERR [20140401-17:57:54.850] finatra:     at scala.collection.AbstractMap.default(Map.scala:58)
+ERR [20140401-17:57:54.850] finatra:     at scala.collection.MapLike$class.apply(MapLike.scala:141)
+ERR [20140401-17:57:54.850] finatra:     at scala.collection.AbstractMap.apply(Map.scala:58)
+ERR [20140401-17:57:54.850] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$8.apply(App.scala:71)
+ERR [20140401-17:57:54.850] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$8.apply(App.scala:63)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:79)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:88)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:95)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:89)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:88)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finatra.Router.dispatchRouteOrCallback(Router.scala:33)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finatra.Router.dispatch(Router.scala:14)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:29)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:28)
+ERR [20140401-17:57:54.850] finatra:     at scala.collection.LinearSeqOptimized$class.find(LinearSeqOptimized.scala:100)
+ERR [20140401-17:57:54.850] finatra:     at scala.collection.immutable.List.find(List.scala:84)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finatra.ControllerCollection.dispatch(ControllerCollection.scala:28)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finatra.AppService.attemptRequest(AppService.scala:51)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:38)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:23)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finagle.Service$$anon$1.apply(Service.scala:14)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:120)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:85)
+ERR [20140401-17:57:54.850] finatra:     at com.twitter.finagle.Filter$$anon$2.apply(Filter.scala:69)
+ERR [20140401-17:57:54.850] finatra:     (...more...)
+INF [20140401-17:57:54.860] finatra: GET /users/share/2164/5707 500 11ms
