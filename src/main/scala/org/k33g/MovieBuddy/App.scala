@@ -40,16 +40,15 @@ object App extends FinatraServer {
 
     post("/rates") { request =>
 
-      val rate = JSON.parseFull(request.getContentString()).asInstanceOf[Map[String, Int]]
+      val rate = JSON.parseFull(request.getContentString()).get.asInstanceOf[Map[String, Int]]
+
       // OR
       /*
       val rate = (JSON.parseFull(request.getContentString()).get match {
         case r : Map[String,Int] => r
         case _ => Map[String,Int]()
       })
-      */      
-
-      println("User Rate : " + rate)
+      */
 
       val userRates = ratings.get(rate("userId"))
 
@@ -58,28 +57,31 @@ object App extends FinatraServer {
       } else {
         ratings += rate("userId") -> (ratings(rate("userId")) ++ Map(rate("movieId")->rate("rate")))
       }
-      println("Ratings : " + ratings)
 
       render.json(ratings).status(201).toFuture
     }
 
-    ////$.getJSON("users/share/2164/452", function(data) { console.log(data); })
+    //$.getJSON("users/share/2164/5707", function(data) { console.log(data); })
     get("/users/share/:userid1/:userid2") { request =>
+
       val userid1 = request.routeParams.getOrElse("userid1",0).toString()
       val userid2 = request.routeParams.getOrElse("userid2",0).toString()
 
-      println("rating map : " +ratings)
-      println(userid1.toInt)
-      println(userid2.toInt)
+      val preco = new Preco()
+      render.json(preco.sharedPreferences(ratings,userid1.toInt,userid2.toInt)).status(200).toFuture
 
-      println(ratings(userid1.toInt))//<-- yes we can
-
-      //val preco = new Preco()
-      //render.json(preco.sharedPreferences(ratings,userid1.toInt,userid2.toInt)).status(200).toFuture
-
-      render.json(null).toFuture
     }
 
+    //$.getJSON("users/distance/2164/5707", function(data) { console.log(data); })
+    get("/users/distance/:userid1/:userid2") { request =>
+
+      val userid1 = request.routeParams.getOrElse("userid1",0).toString()
+      val userid2 = request.routeParams.getOrElse("userid2",0).toString()
+
+      val preco = new Preco()
+      render.json(preco.distance(ratings,userid1.toInt,userid2.toInt)).status(200).toFuture
+
+    }
 
     get("/movies") { request =>
       render.json(moviesList).toFuture
