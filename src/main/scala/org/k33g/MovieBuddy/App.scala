@@ -33,17 +33,21 @@ object App extends FinatraServer {
     })
 
     println("Json Users Loaded")
-
+    
     type Ratings = Map[Int, Map[Int, Int]]
 
     var ratings: Ratings = Map()
 
     post("/rates") { request =>
 
+      val rate = JSON.parseFull(request.getContentString()).asInstanceOf[Map[String, Int]]
+      // OR
+      /*
       val rate = (JSON.parseFull(request.getContentString()).get match {
         case r : Map[String,Int] => r
-        case _ => Nil
-      }).toMap
+        case _ => Map[String,Int]()
+      })
+      */      
 
       println("User Rate : " + rate)
 
@@ -64,10 +68,11 @@ object App extends FinatraServer {
       val userid1 = request.routeParams.getOrElse("userid1",0).toString()
       val userid2 = request.routeParams.getOrElse("userid2",0).toString()
 
+      println("rating map : " +ratings)
       println(userid1.toInt)
       println(userid2.toInt)
 
-      println(ratings.get(userid1.toInt)) //<-- nothing
+      println(ratings(userid1.toInt))//<-- yes we can
 
       //val preco = new Preco()
       //render.json(preco.sharedPreferences(ratings,userid1.toInt,userid2.toInt)).status(200).toFuture
