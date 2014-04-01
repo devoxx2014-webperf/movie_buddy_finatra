@@ -67,8 +67,7 @@ object App extends FinatraServer {
       println(userid1.toInt)
       println(userid2.toInt)
 
-      println("ratings: " + ratings)
-      println("result1 : " + ratings(userid1.toInt))//<-- nothing
+      println(ratings.get(userid1.toInt)) //<-- nothing
 
       //val preco = new Preco()
       //render.json(preco.sharedPreferences(ratings,userid1.toInt,userid2.toInt)).status(200).toFuture
