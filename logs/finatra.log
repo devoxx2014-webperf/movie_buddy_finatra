@@ -4574,3 +4574,324 @@ INF [20140401-21:10:08.159] finatra: admin http server started on port: :9990
 INF [20140401-21:11:38.711] finatra: finatra process 44420 started
 INF [20140401-21:11:38.714] finatra: http server started on port: :7070
 INF [20140401-21:11:39.213] finatra: admin http server started on port: :9990
+INF [20140401-21:16:53.895] finatra: finatra process 44514 started
+INF [20140401-21:16:53.903] finatra: http server started on port: :7070
+INF [20140401-21:16:54.453] finatra: admin http server started on port: :9990
+INF [20140401-21:17:17.663] finatra: finatra process 44521 started
+INF [20140401-21:17:17.665] finatra: http server started on port: :7070
+INF [20140401-21:17:18.264] finatra: admin http server started on port: :9990
+INF [20140401-21:18:20.454] finatra: POST /rates 201 72ms
+INF [20140401-21:18:32.458] finatra: POST /rates 201 16ms
+INF [20140401-21:18:35.691] finatra: POST /rates 201 11ms
+INF [20140401-21:18:45.215] finatra: POST /rates 201 14ms
+ERR [20140401-21:18:54.205] finatra: Internal Server Error
+ERR [20140401-21:18:54.205] finatra: java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Integer
+ERR [20140401-21:18:54.205] finatra:     at scala.runtime.BoxesRunTime.unboxToInt(BoxesRunTime.java:106)
+ERR [20140401-21:18:54.205] finatra:     at org.k33g.MovieBuddy.Preco$$anonfun$distance$1.apply(Preco.scala:22)
+ERR [20140401-21:18:54.205] finatra:     at scala.collection.immutable.List.foreach(List.scala:318)
+ERR [20140401-21:18:54.205] finatra:     at org.k33g.MovieBuddy.Preco.distance(Preco.scala:22)
+ERR [20140401-21:18:54.205] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$11.apply(App.scala:82)
+ERR [20140401-21:18:54.205] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$11.apply(App.scala:76)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:79)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:88)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:95)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:89)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:88)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finatra.Router.dispatchRouteOrCallback(Router.scala:33)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finatra.Router.dispatch(Router.scala:14)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:29)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:28)
+ERR [20140401-21:18:54.205] finatra:     at scala.collection.LinearSeqOptimized$class.find(LinearSeqOptimized.scala:100)
+ERR [20140401-21:18:54.205] finatra:     at scala.collection.immutable.List.find(List.scala:84)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finatra.ControllerCollection.dispatch(ControllerCollection.scala:28)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finatra.AppService.attemptRequest(AppService.scala:51)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:38)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:23)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finagle.Service$$anon$1.apply(Service.scala:14)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:120)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:85)
+ERR [20140401-21:18:54.205] finatra:     at com.twitter.finagle.Filter$$anon$2.apply(Filter.scala:69)
+ERR [20140401-21:18:54.205] finatra:     (...more...)
+INF [20140401-21:18:54.213] finatra: GET /users/distance/2164/5707 500 15ms
+INF [20140401-21:19:10.999] finatra: finatra process 44535 started
+INF [20140401-21:19:11.001] finatra: http server started on port: :7070
+INF [20140401-21:19:11.565] finatra: admin http server started on port: :9990
+INF [20140401-21:19:18.594] finatra: POST /rates 201 71ms
+INF [20140401-21:19:23.464] finatra: POST /rates 201 10ms
+INF [20140401-21:19:27.023] finatra: POST /rates 201 13ms
+INF [20140401-21:19:31.003] finatra: POST /rates 201 12ms
+INF [20140401-21:19:51.375] finatra: POST /rates 201 15ms
+INF [20140401-21:19:56.843] finatra: GET /users/distance/2164/5707 200 9ms
+INF [20140401-21:20:55.235] finatra: finatra process 44551 started
+INF [20140401-21:20:55.238] finatra: http server started on port: :7070
+INF [20140401-21:20:55.834] finatra: admin http server started on port: :9990
+INF [20140401-21:21:44.059] finatra: finatra process 44562 started
+INF [20140401-21:21:44.062] finatra: http server started on port: :7070
+INF [20140401-21:21:44.616] finatra: admin http server started on port: :9990
+INF [20140401-21:22:39.716] finatra: POST /rates 201 82ms
+INF [20140401-21:22:51.958] finatra: POST /rates 201 17ms
+INF [20140401-21:23:02.386] finatra: POST /rates 201 15ms
+INF [20140401-21:23:10.959] finatra: POST /rates 201 15ms
+ERR [20140401-21:23:15.168] finatra: Internal Server Error
+ERR [20140401-21:23:15.168] finatra: java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Integer
+ERR [20140401-21:23:15.168] finatra:     at scala.runtime.BoxesRunTime.unboxToInt(BoxesRunTime.java:106)
+ERR [20140401-21:23:15.168] finatra:     at org.k33g.MovieBuddy.Preco$$anonfun$distance$1.apply$mcVD$sp(Preco.scala:25)
+ERR [20140401-21:23:15.168] finatra:     at org.k33g.MovieBuddy.Preco$$anonfun$distance$1.apply(Preco.scala:22)
+ERR [20140401-21:23:15.168] finatra:     at org.k33g.MovieBuddy.Preco$$anonfun$distance$1.apply(Preco.scala:22)
+ERR [20140401-21:23:15.168] finatra:     at scala.collection.immutable.List.foreach(List.scala:318)
+ERR [20140401-21:23:15.168] finatra:     at org.k33g.MovieBuddy.Preco.distance(Preco.scala:22)
+ERR [20140401-21:23:15.168] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$11.apply(App.scala:82)
+ERR [20140401-21:23:15.168] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$11.apply(App.scala:76)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:79)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:88)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:95)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:89)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:88)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finatra.Router.dispatchRouteOrCallback(Router.scala:33)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finatra.Router.dispatch(Router.scala:14)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:29)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:28)
+ERR [20140401-21:23:15.168] finatra:     at scala.collection.LinearSeqOptimized$class.find(LinearSeqOptimized.scala:100)
+ERR [20140401-21:23:15.168] finatra:     at scala.collection.immutable.List.find(List.scala:84)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finatra.ControllerCollection.dispatch(ControllerCollection.scala:28)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finatra.AppService.attemptRequest(AppService.scala:51)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:38)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:23)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finagle.Service$$anon$1.apply(Service.scala:14)
+ERR [20140401-21:23:15.168] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:120)
+ERR [20140401-21:23:15.168] finatra:     (...more...)
+INF [20140401-21:23:15.177] finatra: GET /users/distance/2164/5707 500 17ms
+INF [20140401-21:24:53.074] finatra: finatra process 44579 started
+INF [20140401-21:24:53.077] finatra: http server started on port: :7070
+INF [20140401-21:24:53.954] finatra: admin http server started on port: :9990
+INF [20140403-14:33:49.043] finatra: finatra process 10876 started
+INF [20140403-14:33:49.047] finatra: http server started on port: :7070
+INF [20140403-14:33:49.678] finatra: admin http server started on port: :9990
+INF [20140403-14:34:31.413] finatra: POST /rates 201 104ms
+INF [20140403-14:34:41.507] finatra: POST /rates 201 14ms
+INF [20140403-14:34:48.648] finatra: POST /rates 201 11ms
+INF [20140403-14:35:01.502] finatra: POST /rates 201 6ms
+ERR [20140403-14:36:37.621] finatra: Internal Server Error
+ERR [20140403-14:36:37.621] finatra: java.lang.NumberFormatException: For input string: "5707""
+ERR [20140403-14:36:37.621] finatra:     at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+ERR [20140403-14:36:37.621] finatra:     at java.lang.Integer.parseInt(Integer.java:580)
+ERR [20140403-14:36:37.621] finatra:     at java.lang.Integer.parseInt(Integer.java:615)
+ERR [20140403-14:36:37.621] finatra:     at scala.collection.immutable.StringLike$class.toInt(StringLike.scala:229)
+ERR [20140403-14:36:37.621] finatra:     at scala.collection.immutable.StringOps.toInt(StringOps.scala:31)
+ERR [20140403-14:36:37.621] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$11.apply(App.scala:82)
+ERR [20140403-14:36:37.621] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$11.apply(App.scala:76)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:79)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:88)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:95)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:89)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:88)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finatra.Router.dispatchRouteOrCallback(Router.scala:33)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finatra.Router.dispatch(Router.scala:14)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:29)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:28)
+ERR [20140403-14:36:37.621] finatra:     at scala.collection.LinearSeqOptimized$class.find(LinearSeqOptimized.scala:100)
+ERR [20140403-14:36:37.621] finatra:     at scala.collection.immutable.List.find(List.scala:84)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finatra.ControllerCollection.dispatch(ControllerCollection.scala:28)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finatra.AppService.attemptRequest(AppService.scala:51)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:38)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:23)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finagle.Service$$anon$1.apply(Service.scala:14)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:120)
+ERR [20140403-14:36:37.621] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:85)
+ERR [20140403-14:36:37.621] finatra:     (...more...)
+INF [20140403-14:36:37.632] finatra: GET /users/distance/2164/5707%22 500 18ms
+INF [20140403-14:37:21.131] finatra: GET /users/distance/2164/5707 200 7ms
+INF [20140403-14:38:21.563] finatra: finatra process 10919 started
+INF [20140403-14:38:21.570] finatra: http server started on port: :7070
+INF [20140403-14:38:22.447] finatra: admin http server started on port: :9990
+INF [20140403-14:38:33.764] finatra: POST /rates 201 90ms
+INF [20140403-14:38:40.252] finatra: POST /rates 201 13ms
+INF [20140403-14:38:45.189] finatra: POST /rates 201 16ms
+INF [20140403-14:38:51.744] finatra: POST /rates 201 9ms
+INF [20140403-14:39:03.364] finatra: finatra process 10929 started
+INF [20140403-14:39:03.366] finatra: http server started on port: :7070
+INF [20140403-14:39:03.858] finatra: admin http server started on port: :9990
+ERR [20140403-14:39:29.371] finatra: Internal Server Error
+ERR [20140403-14:39:29.371] finatra: java.util.NoSuchElementException: key not found: 2164
+ERR [20140403-14:39:29.371] finatra:     at scala.collection.MapLike$class.default(MapLike.scala:228)
+ERR [20140403-14:39:29.371] finatra:     at scala.collection.AbstractMap.default(Map.scala:58)
+ERR [20140403-14:39:29.371] finatra:     at scala.collection.MapLike$class.apply(MapLike.scala:141)
+ERR [20140403-14:39:29.371] finatra:     at scala.collection.AbstractMap.apply(Map.scala:58)
+ERR [20140403-14:39:29.371] finatra:     at org.k33g.MovieBuddy.Preco.distance(Preco.scala:17)
+ERR [20140403-14:39:29.371] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$11.apply(App.scala:82)
+ERR [20140403-14:39:29.371] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$11.apply(App.scala:76)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:79)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:88)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:95)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:89)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:88)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finatra.Router.dispatchRouteOrCallback(Router.scala:33)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finatra.Router.dispatch(Router.scala:14)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:29)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:28)
+ERR [20140403-14:39:29.371] finatra:     at scala.collection.LinearSeqOptimized$class.find(LinearSeqOptimized.scala:100)
+ERR [20140403-14:39:29.371] finatra:     at scala.collection.immutable.List.find(List.scala:84)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finatra.ControllerCollection.dispatch(ControllerCollection.scala:28)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finatra.AppService.attemptRequest(AppService.scala:51)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:38)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:23)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finagle.Service$$anon$1.apply(Service.scala:14)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:120)
+ERR [20140403-14:39:29.371] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:85)
+ERR [20140403-14:39:29.371] finatra:     (...more...)
+INF [20140403-14:39:29.402] finatra: GET /users/distance/2164/5707 500 40ms
+INF [20140403-14:40:13.683] finatra: POST /rates 201 82ms
+INF [20140403-14:40:18.262] finatra: POST /rates 201 10ms
+INF [20140403-14:40:21.316] finatra: POST /rates 201 13ms
+INF [20140403-14:40:25.220] finatra: POST /rates 201 14ms
+INF [20140403-14:41:06.849] finatra: POST /rates 201 10ms
+INF [20140403-14:41:51.992] finatra: POST /rates 201 6ms
+INF [20140403-14:42:12.730] finatra: GET /users/distance/2164/5707 200 9ms
+INF [20140403-14:46:50.436] finatra: finatra process 10976 started
+INF [20140403-14:46:50.440] finatra: http server started on port: :7070
+INF [20140403-14:46:50.971] finatra: admin http server started on port: :9990
+INF [20140403-14:48:07.521] finatra: POST /rates 201 93ms
+INF [20140403-14:48:39.021] finatra: POST /rates 201 16ms
+INF [20140403-14:48:49.061] finatra: POST /rates 201 14ms
+INF [20140403-14:49:02.575] finatra: POST /rates 201 14ms
+ERR [20140403-14:50:16.357] finatra: Internal Server Error
+ERR [20140403-14:50:16.357] finatra: java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Integer
+ERR [20140403-14:50:16.357] finatra:     at scala.runtime.BoxesRunTime.unboxToInt(BoxesRunTime.java:106)
+ERR [20140403-14:50:16.357] finatra:     at org.k33g.MovieBuddy.Preco$$anonfun$distance$1.apply(Preco.scala:26)
+ERR [20140403-14:50:16.357] finatra:     at scala.collection.immutable.List.foreach(List.scala:318)
+ERR [20140403-14:50:16.357] finatra:     at org.k33g.MovieBuddy.Preco.distance(Preco.scala:26)
+ERR [20140403-14:50:16.357] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$11.apply(App.scala:82)
+ERR [20140403-14:50:16.357] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$11.apply(App.scala:76)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:79)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:88)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:95)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:89)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:88)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finatra.Router.dispatchRouteOrCallback(Router.scala:33)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finatra.Router.dispatch(Router.scala:14)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:29)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:28)
+ERR [20140403-14:50:16.357] finatra:     at scala.collection.LinearSeqOptimized$class.find(LinearSeqOptimized.scala:100)
+ERR [20140403-14:50:16.357] finatra:     at scala.collection.immutable.List.find(List.scala:84)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finatra.ControllerCollection.dispatch(ControllerCollection.scala:28)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finatra.AppService.attemptRequest(AppService.scala:51)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:38)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:23)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finagle.Service$$anon$1.apply(Service.scala:14)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:120)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:85)
+ERR [20140403-14:50:16.357] finatra:     at com.twitter.finagle.Filter$$anon$2.apply(Filter.scala:69)
+ERR [20140403-14:50:16.357] finatra:     (...more...)
+INF [20140403-14:50:16.372] finatra: GET /users/distance/2164/5707 500 26ms
+INF [20140403-14:52:32.899] finatra: finatra process 11006 started
+INF [20140403-14:52:32.901] finatra: http server started on port: :7070
+INF [20140403-14:52:33.585] finatra: admin http server started on port: :9990
+INF [20140403-14:52:42.046] finatra: POST /rates 201 102ms
+INF [20140403-14:52:45.361] finatra: POST /rates 201 14ms
+INF [20140403-14:52:52.424] finatra: POST /rates 201 13ms
+ERR [20140403-14:53:04.836] finatra: Internal Server Error
+ERR [20140403-14:53:04.836] finatra: java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Integer
+ERR [20140403-14:53:04.836] finatra:     at scala.runtime.BoxesRunTime.unboxToInt(BoxesRunTime.java:106)
+ERR [20140403-14:53:04.836] finatra:     at org.k33g.MovieBuddy.Preco$$anonfun$distance$1.apply(Preco.scala:26)
+ERR [20140403-14:53:04.836] finatra:     at scala.collection.immutable.List.foreach(List.scala:318)
+ERR [20140403-14:53:04.836] finatra:     at org.k33g.MovieBuddy.Preco.distance(Preco.scala:26)
+ERR [20140403-14:53:04.836] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$11.apply(App.scala:82)
+ERR [20140403-14:53:04.836] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$11.apply(App.scala:76)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:79)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:88)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:95)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:89)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:88)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finatra.Router.dispatchRouteOrCallback(Router.scala:33)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finatra.Router.dispatch(Router.scala:14)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:29)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:28)
+ERR [20140403-14:53:04.836] finatra:     at scala.collection.LinearSeqOptimized$class.find(LinearSeqOptimized.scala:100)
+ERR [20140403-14:53:04.836] finatra:     at scala.collection.immutable.List.find(List.scala:84)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finatra.ControllerCollection.dispatch(ControllerCollection.scala:28)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finatra.AppService.attemptRequest(AppService.scala:51)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:38)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:23)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finagle.Service$$anon$1.apply(Service.scala:14)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:120)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:85)
+ERR [20140403-14:53:04.836] finatra:     at com.twitter.finagle.Filter$$anon$2.apply(Filter.scala:69)
+ERR [20140403-14:53:04.836] finatra:     (...more...)
+INF [20140403-14:53:04.868] finatra: GET /users/distance/2164/5707 500 42ms
+INF [20140403-14:54:18.488] finatra: finatra process 11024 started
+INF [20140403-14:54:18.491] finatra: http server started on port: :7070
+INF [20140403-14:54:18.990] finatra: admin http server started on port: :9990
+INF [20140403-14:54:26.664] finatra: POST /rates 201 136ms
+INF [20140403-14:54:28.635] finatra: POST /rates 201 14ms
+INF [20140403-14:54:36.191] finatra: POST /rates 201 10ms
+INF [20140403-14:54:41.076] finatra: POST /rates 201 8ms
+ERR [20140403-14:54:50.371] finatra: Internal Server Error
+ERR [20140403-14:54:50.371] finatra: java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Integer
+ERR [20140403-14:54:50.371] finatra:     at scala.runtime.BoxesRunTime.unboxToInt(BoxesRunTime.java:106)
+ERR [20140403-14:54:50.371] finatra:     at org.k33g.MovieBuddy.Preco$$anonfun$distance$1.apply(Preco.scala:27)
+ERR [20140403-14:54:50.371] finatra:     at scala.collection.immutable.List.foreach(List.scala:318)
+ERR [20140403-14:54:50.371] finatra:     at org.k33g.MovieBuddy.Preco.distance(Preco.scala:27)
+ERR [20140403-14:54:50.371] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$11.apply(App.scala:82)
+ERR [20140403-14:54:50.371] finatra:     at org.k33g.MovieBuddy.App$HttpApp$$anonfun$11.apply(App.scala:76)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1$$anonfun$apply$1.apply(Controller.scala:90)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:79)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:88)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finagle.stats.StatsReceiver$class.timeFuture(StatsReceiver.scala:95)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finagle.stats.NameTranslatingStatsReceiver.timeFuture(StatsReceiver.scala:180)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:89)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finatra.Controller$$anonfun$addRoute$1.apply(Controller.scala:88)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finatra.Router.dispatchRouteOrCallback(Router.scala:33)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finatra.Router.dispatch(Router.scala:14)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:29)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finatra.ControllerCollection$$anonfun$dispatch$1.apply(ControllerCollection.scala:28)
+ERR [20140403-14:54:50.371] finatra:     at scala.collection.LinearSeqOptimized$class.find(LinearSeqOptimized.scala:100)
+ERR [20140403-14:54:50.371] finatra:     at scala.collection.immutable.List.find(List.scala:84)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finatra.ControllerCollection.dispatch(ControllerCollection.scala:28)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finatra.AppService.attemptRequest(AppService.scala:51)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:38)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finatra.AppService.apply(AppService.scala:23)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finagle.Service$$anon$1.apply(Service.scala:14)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:120)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finatra.FileService.apply(FileService.scala:85)
+ERR [20140403-14:54:50.371] finatra:     at com.twitter.finagle.Filter$$anon$2.apply(Filter.scala:69)
+ERR [20140403-14:54:50.371] finatra:     (...more...)
+INF [20140403-14:54:50.388] finatra: GET /users/distance/2164/5707 500 30ms
+INF [20140403-14:55:32.865] finatra: finatra process 11039 started
+INF [20140403-14:55:32.868] finatra: http server started on port: :7070
+INF [20140403-14:55:33.523] finatra: admin http server started on port: :9990
+INF [20140403-14:57:23.824] finatra: finatra process 11062 started
+INF [20140403-14:57:23.826] finatra: http server started on port: :7070
+INF [20140403-14:57:24.452] finatra: admin http server started on port: :9990
