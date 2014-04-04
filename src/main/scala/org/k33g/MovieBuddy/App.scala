@@ -34,13 +34,12 @@ object App extends FinatraServer {
 
     println("Json Users Loaded")
     
-    type Ratings = Map[Int, Map[Int, Int]]
 
-    var ratings: Ratings = Map()
+    var ratings: Map[Double, Map[Double, Double]] = Map()
 
     post("/rates") { request =>
 
-      val rate = JSON.parseFull(request.getContentString()).get.asInstanceOf[Map[String, Int]]
+      val rate = JSON.parseFull(request.getContentString()).get.asInstanceOf[Map[String, Double]]
 
       // OR
       /*
@@ -53,12 +52,20 @@ object App extends FinatraServer {
       val userRates = ratings.get(rate("userId"))
 
       if (userRates.isEmpty) { // new
-        ratings +=  rate("userId") ->  Map(rate("movieId")->rate("rate"))
+        ratings +=  rate("userId") ->  Map(rate("movieId") -> rate("rate"))
       } else {
-        ratings += rate("userId") -> (ratings(rate("userId")) ++ Map(rate("movieId")->rate("rate")))
+        ratings += rate("userId") -> (ratings(rate("userId")) ++ Map(rate("movieId") -> rate("rate")))
       }
 
-      render.json(ratings).status(201).toFuture
+      //render.header("location","/rates/"+rate("userId").toInt.toString).json(ratings).status(201).toFuture
+      render.header("location","/rates/"+rate("userId").toInt.toString).status(201).nothing.toFuture
+
+    }
+
+    //$.getJSON("rates/2164", function(data) { console.log(data); })
+    get("/rates/:userid1") { request =>
+      val userid1 = request.routeParams.getOrElse("userid1",0).toString()
+      render.json(ratings(userid1.toInt)).status(200).toFuture
     }
 
     //$.getJSON("users/share/2164/5707", function(data) { console.log(data); })
@@ -69,7 +76,6 @@ object App extends FinatraServer {
 
       val preco = new Preco()
       render.json(preco.sharedPreferences(ratings,userid1.toInt,userid2.toInt)).status(200).toFuture
-
     }
 
     //$.getJSON("users/distance/2164/5707", function(data) { console.log(data); })
@@ -80,7 +86,6 @@ object App extends FinatraServer {
 
       val preco = new Preco()
       render.json(preco.distance(ratings,userid1.toInt,userid2.toInt)).status(200).toFuture
-
     }
 
     get("/movies") { request =>
@@ -153,21 +158,11 @@ object App extends FinatraServer {
     }
 
 
-    /**
-     * Custom Error Handling
-     *
-     * curl http://localhost:7070/error
-     */
     get("/error")   { request =>
       1234/0
       render.plain("we never make it here").toFuture
     }
 
-    /**
-     * Custom Error Handling with custom Exception
-     *
-     * curl http://localhost:7070/unauthorized
-     */
     class Unauthorized extends Exception
 
     get("/unauthorized") { request =>
@@ -187,11 +182,6 @@ object App extends FinatraServer {
       }
     }
 
-    /**
-     * Custom 404s
-     *
-     * curl http://localhost:7070/notfound
-     */
     notFound { request =>
       render.status(404).plain("not found yo").toFuture
     }
