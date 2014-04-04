@@ -7,7 +7,7 @@ Finatra requires either [maven](http://maven.apache.org/) or [sbt](http://www.sc
 ### Runs your app on port 7070
 
     sbt run
-    sbt ~re-start
+    # or sbt ~re-start
 
 ### Testing
 
