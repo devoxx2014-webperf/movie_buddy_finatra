@@ -85,7 +85,7 @@ object App extends FinatraServer {
       val userid2 = request.routeParams.getOrElse("userid2",0).toString()
 
       val preco = new Preco()
-      render.json(preco.distance(ratings,userid1.toInt,userid2.toInt)).status(200).toFuture
+      render.json(Map("distance" -> preco.distance(ratings,userid1.toInt,userid2.toInt))).status(200).toFuture
     }
 
     get("/movies") { request =>
