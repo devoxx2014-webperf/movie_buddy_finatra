@@ -9,6 +9,8 @@ object App extends FinatraServer {
   
   class HttpApp extends Controller {
 
+    System.setProperty("com.twitter.finatra.config.logLevel", "ERROR")
+
     println("I am the constructor ...")
 
     val path = new java.io.File(".").getCanonicalPath()
@@ -33,6 +35,8 @@ object App extends FinatraServer {
     })
 
     println("Json Users Loaded")
+
+    println("Listening ...")
     
 
     var ratings: Map[Double, Map[Double, Double]] = Map()
@@ -58,7 +62,7 @@ object App extends FinatraServer {
       }
 
       //render.header("location","/rates/"+rate("userId").toInt.toString).json(ratings).status(201).toFuture
-      render.header("location","/rates/"+rate("userId").toInt.toString).status(201).nothing.toFuture
+      render.header("location","/rates/"+rate("userId").toInt.toString).status(301).nothing.toFuture
 
     }
 
