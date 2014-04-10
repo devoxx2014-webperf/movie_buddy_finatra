@@ -10,11 +10,17 @@ object App extends FinatraServer {
   class HttpApp extends Controller {
 
     System.setProperty("com.twitter.finatra.config.logLevel", "ERROR")
+    System.setProperty("com.twitter.finatra.config.port", ":"+System.getProperty("app.port", "3000"))
+    System.setProperty("com.twitter.finatra.config.env","production")
+    System.setProperty("com.twitter.finatra.config.assetPath", "/public")
+    //System.setProperty("com.twitter.finatra.config.docRoot", "src/main/resources")
 
-    println("I am the constructor ...")
+
 
     val path = new java.io.File(".").getCanonicalPath()
-    val sourceMovies = scala.io.Source.fromFile(path + "/json/movies.json")
+
+    //val sourceMovies = scala.io.Source.fromFile(path + "/jsondb/movies.json")
+    val sourceMovies = scala.io.Source.fromURL(getClass.getResource("/jsondb/movies.json"))
     val linesMovies = sourceMovies.mkString
     sourceMovies.close()
 
@@ -25,7 +31,8 @@ object App extends FinatraServer {
 
     println("Json Movies Loaded")
 
-    val sourceUsers = scala.io.Source.fromFile(path + "/json/users.json")
+    //val sourceUsers = scala.io.Source.fromFile(path + "/jsondb/users.json")
+    val sourceUsers = scala.io.Source.fromURL(getClass.getResource("/jsondb/users.json"))
     val linesUsers = sourceUsers.mkString
     sourceUsers.close()
 
@@ -44,15 +51,6 @@ object App extends FinatraServer {
     post("/rates") { request =>
 
       val rate = JSON.parseFull(request.getContentString()).get.asInstanceOf[Map[String, Double]]
-
-      // OR
-      /*
-      val rate = (JSON.parseFull(request.getContentString()).get match {
-        case r : Map[String,Int] => r
-        case _ => Map[String,Int]()
-      })
-      */
-
       val userRates = ratings.get(rate("userId"))
 
       if (userRates.isEmpty) { // new
@@ -60,19 +58,14 @@ object App extends FinatraServer {
       } else {
         ratings += rate("userId") -> (ratings(rate("userId")) ++ Map(rate("movieId") -> rate("rate")))
       }
-
-      //render.header("location","/rates/"+rate("userId").toInt.toString).json(ratings).status(201).toFuture
       render.header("location","/rates/"+rate("userId").toInt.toString).status(301).nothing.toFuture
-
     }
 
-    //$.getJSON("rates/2164", function(data) { console.log(data); })
     get("/rates/:userid1") { request =>
       val userid1 = request.routeParams.getOrElse("userid1",0).toString()
       render.json(ratings(userid1.toInt)).status(200).toFuture
     }
 
-    //$.getJSON("users/share/2164/5707", function(data) { console.log(data); })
     get("/users/share/:userid1/:userid2") { request =>
 
       val userid1 = request.routeParams.getOrElse("userid1",0).toString()
@@ -82,7 +75,6 @@ object App extends FinatraServer {
       render.json(preco.sharedPreferences(ratings,userid1.toInt,userid2.toInt)).status(200).toFuture
     }
 
-    //$.getJSON("users/distance/2164/5707", function(data) { console.log(data); })
     get("/users/distance/:userid1/:userid2") { request =>
 
       val userid1 = request.routeParams.getOrElse("userid1",0).toString()
@@ -159,11 +151,11 @@ object App extends FinatraServer {
 
     get("/") { request =>
       render.static("index.html").toFuture
+      //render.static("public/index.html").toFuture
     }
 
 
     get("/error")   { request =>
-      1234/0
       render.plain("we never make it here").toFuture
     }
 
