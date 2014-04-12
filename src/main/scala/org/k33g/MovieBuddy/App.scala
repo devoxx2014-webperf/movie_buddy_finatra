@@ -13,11 +13,8 @@ object App extends FinatraServer {
     System.setProperty("com.twitter.finatra.config.port", ":"+System.getProperty("app.port", "3000"))
     System.setProperty("com.twitter.finatra.config.env","production")
     System.setProperty("com.twitter.finatra.config.assetPath", "/public")
-    //System.setProperty("com.twitter.finatra.config.docRoot", "src/main/resources")
 
-
-
-    val path = new java.io.File(".").getCanonicalPath()
+    //val path = new java.io.File(".").getCanonicalPath()
 
     //val sourceMovies = scala.io.Source.fromFile(path + "/jsondb/movies.json")
     val sourceMovies = scala.io.Source.fromURL(getClass.getResource("/jsondb/movies.json"))
@@ -61,9 +58,9 @@ object App extends FinatraServer {
       render.header("location","/rates/"+rate("userId").toInt.toString).status(301).nothing.toFuture
     }
 
-    get("/rates/:userid1") { request =>
-      val userid1 = request.routeParams.getOrElse("userid1",0).toString()
-      render.json(ratings(userid1.toInt)).status(200).toFuture
+    get("/rates/:userid") { request =>
+      val userid = request.routeParams.getOrElse("userid",0).toString()
+      render.json(ratings(userid.toInt)).status(200).toFuture
     }
 
     get("/users/share/:userid1/:userid2") { request =>
@@ -151,9 +148,7 @@ object App extends FinatraServer {
 
     get("/") { request =>
       render.static("index.html").toFuture
-      //render.static("public/index.html").toFuture
     }
-
 
     get("/error")   { request =>
       render.plain("we never make it here").toFuture
