@@ -19,9 +19,6 @@ class Preco {
 
     val shared = user1Preferences.keys.toList intersect user2Preferences.keys.toList
 
-    //java.lang.Double cannot be cast to java.lang.Integer
-    //shared.foreach( pref => println(pref))
-
     if (shared isEmpty) 0
 
     else {
